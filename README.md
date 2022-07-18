@@ -51,21 +51,43 @@ docker run -it \
     -v $PROJECT_DIR/data:/data \
     spark-hadoop-airflow
 
-Click on below link to access portal
-http://localhost:9870 or http://0.0.0.0:9870
-Name Node
 
-Hadoop Cluster http://localhost:8088 or http://0.0.0.0:8088
+[Name Node](http://localhost:9870/)
+[Airflow](http://localhost:8085/)
+[Hadoop Data Node](http://localhost:9864/)
+[Jupyter lab](http://localhost:8888/)
+[Hadoop Cluster](http://localhost:8088/)
+[Spark Master](http://localhost:8080/)
 
-Spark Master http://localhost:8080 or http://0.0.0.0:8080
 
-History Server http://localhost:18080 or http://0.0.0.0:18080
 
-Jupyter lab http://localhost:8888 or http://0.0.0.0:8888
+To List docker images
+```
+docker images
+```
 
-Hadoop Data Node http://localhost:9000 or http://0.0.0.0:9000
+To list all running container
+```
+docker ps
+```
 
-Airflow UI  http://localhost:8085 or http://0.0.0.0:8085
-login UN/PW: admin/airflow
+To Build docker images
+Note: We must have a Dockerfile in current directory 
+```
+docker build -t image_name:tag_name .
+```
 
-Spark Worker Node
+to stop running container
+```
+docker stop container_id
+```
+
+To start stop container
+```
+docker start container_name
+```
+
+```
+airflow user: admin
+airflow pass: airflow
+```
